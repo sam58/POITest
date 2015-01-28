@@ -76,7 +76,11 @@ public class Main {
                // Object[] objArr = newData.get(key);
                 Object[] objArr= new Object[280] ;
                 for (int jj=0;jj<280;jj++){//столбцов
-                    objArr[jj]= gg.toString()+"ddd"+jj;
+                    if(jj % 2 != 0){
+                      objArr[jj]= gg.toString()+"ddd"+jj;
+                    }else{
+                        objArr[jj]= jj*2.1;
+                    }
                 }
                 int cellnum = 0;
                 for (Object obj : objArr) {
